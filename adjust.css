@@ -35,11 +35,11 @@ html {
  ===========================================================================
 **/
 
-@pattern-action:	#428bca;
-@pattern-info:		#5bc0de;
-@pattern-success:	#5cb85c;
-@pattern-warning:	#f0ad4e;
-@pattern-danger:	#d9534f;
+@pattern-blue:	#428bca;		/*principale (per il default usare @gray-dark)*/
+@pattern-azure:		#5bc0de;	/*informazioni*/
+@pattern-green:	#5cb85c;		/*successo*/
+@pattern-orange:	#f0ad4e;	/*attenzione*/
+@pattern-red:	#d9534f;		/*errore*/
 
 @gray-darker:  lighten(#000, 13.5%); // #222
 @gray-dark:    lighten(#000, 20%);   // #333
