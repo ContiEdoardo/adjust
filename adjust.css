@@ -1,4 +1,4 @@
-/*! adjust.css v1.0.0 | MIT License | http://git.io/mC9qUA */
+/*! adjust.css v1.0.2 | MIT License | http://git.io/mC9qUA */
 /* developed by Edoardo Conti */
 
 
@@ -22,10 +22,41 @@ html {
     clear: both;
 }
 
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    text-rendering: optimizelegibility;
+}
 
-/* ## body ## */
+
+
+/**
+ - 2. Colori ( principali e scala di grigi );
+ ===========================================================================
+**/
+
+@pattern-action:	#428bca;
+@pattern-info:		#5bc0de;
+@pattern-success:	#5cb85c;
+@pattern-warning:	#f0ad4e;
+@pattern-danger:	#d9534f;
+
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 60%);   // #999
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+
+
+/**
+ - 3. Body
+ ===========================================================================
+**/
+
 body {
     background: #fff;
+	color: @gray-dark;
     margin: 0;
     padding: 0px;
     font-size: 14px;
@@ -35,7 +66,7 @@ body {
 
 
 /**
- - 1. Classi procedurali 
+ - 4. Classi procedurali 
  ===========================================================================
 **/
 
@@ -58,8 +89,15 @@ body {
 	/*tutto su una riga*/;
 }
 
+.showed {
+  display: block !important;
+}
 .hidden {
-    display: none !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+.invisible {
+  visibility: hidden;
 }
 
 .disabled {
@@ -67,8 +105,15 @@ body {
     cursor: default;
 }
 
+.float-left {
+	float: left !important;
+}
+.float-right {
+	float: right !important;
+}
+
 /* ## definizioni per content ## */
-p, h1, h2, h3 {
+p, h1, h2, h3, h4 {
     orphans: 3;
     widows: 3;
 }
@@ -79,6 +124,10 @@ p {
 
 b, strong {
     font-weight: 600;
+}
+
+em, italic {
+	font-style: italic;	
 }
 
 small, .small {
@@ -109,11 +158,11 @@ hr {
 
 
 /* ## titoli ## */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     page-break-after: avoid;
 }
 
-h1, h2, h3, .h1, .h2, .h3 {
+h1, h2, h3, .h1, .h2, .h3, h4, .h4 {
     color: inherit;
     font-family: inherit;
     font-weight: 500;
@@ -137,8 +186,17 @@ h3, .h3 {
     font-size: 24px;
 }
 
+h4, .h4 {
+	font-size: 18px;	
+}
 
-/* ## links ## */
+
+
+/**
+ - 5. Links 
+ ===========================================================================
+**/
+
 a {
     background: transparent;
 }
@@ -148,7 +206,13 @@ a:hover {
     outline: 0;
 }
 
-/* ## definizioni per immagini ## */
+
+
+/**
+ - 6. Immagini 
+ ===========================================================================
+**/
+
 img {
     border: 0 none;
     page-break-inside: avoid;
@@ -169,11 +233,17 @@ img {
     border-radius: 50%;
 }
 
+.img-thumb {
+	background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+	padding: 4px;	
+}
 
 
 /**
- - 1. Form
- - 2. Bottoni, input e textaree
+ - 7. Form
+ - 8. Bottoni, input e textaree
  ===========================================================================
 **/
 button, input, optgroup, select, textarea {
@@ -209,7 +279,7 @@ textarea {
 
 
 /**
- - 1. Tabelle
+ - 9. Tabelle
  ===========================================================================
 **/
 
