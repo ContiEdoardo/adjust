@@ -17,14 +17,13 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     text-rendering: optimizelegibility;
-		/*migliorando la leggibilità*/
     word-wrap: break-word;
     clear: both;
 }
 
 *:before, *:after {
     -webkit-box-sizing: border-box;
-	box-sizing: border-box;
+    box-sizing: border-box;
     text-rendering: optimizelegibility;
 }
 
@@ -56,7 +55,7 @@ html {
 
 body {
     background: #fff;
-	color: @gray_dark;
+    color: @gray_dark;
     margin: 0;
     padding: 0px;
     font-size: 14px;
@@ -76,7 +75,6 @@ body {
     left: 0px;
     width: 100%;
     -webkit-backface-visibility: hidden;
-		/*importante per webkit*/;
 }
 
 .awful {
@@ -86,18 +84,19 @@ body {
 
 .sameline {
     white-space: nowrap;
-	/*tutto su una riga*/;
 }
 
 .showed {
-  display: block !important;
+    display: block !important;
 }
+
 .hidden {
-  display: none !important;
-  visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
+
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .disabled {
@@ -106,10 +105,11 @@ body {
 }
 
 .float-left {
-	float: left !important;
+    float: left !important;
 }
+
 .float-right {
-	float: right !important;
+    float: right !important;
 }
 
 /* ## definizioni per content ## */
@@ -127,7 +127,7 @@ b, strong {
 }
 
 em, italic {
-	font-style: italic;	
+    font-style: italic;
 }
 
 small, .small {
@@ -187,7 +187,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	font-size: 18px;	
+    font-size: 18px;
 }
 
 
@@ -199,6 +199,7 @@ h4, .h4 {
 
 a {
     background: transparent;
+	color: @pattern_blue;
 }
 
 a:active,
@@ -234,10 +235,10 @@ img {
 }
 
 .img-thumb {
-	background-color: #FFFFFF;
+    background-color: #FFFFFF;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-	padding: 4px;	
+    padding: 4px;
 }
 
 
